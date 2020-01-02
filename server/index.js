@@ -25,6 +25,10 @@ app.get("/handskars", (req, res) => {
   db.getHandskar(result => res.send(result))
 });
 
+app.get("/knid", (req, res) => {
+  db.getKnid(result => res.send(result))
+})
+
 // --- TOM'S OLD ROUTES
 
 app.get("/sources/bundle", (req, res) => {
