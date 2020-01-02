@@ -20,10 +20,10 @@ import NavBar from './components/NavBar';
 import FadingPlaceholder from './components/FadingPlaceholder';
 import Breadcrumb from './components/Breadcrumb';
 
-const url = 'http://teammeatballs-searchbar.us-east-2.elasticbeanstalk.com/';
+// const url = 'http://teammeatballs-searchbar.us-east-2.elasticbeanstalk.com/';
 
 // URL FOR WORKING LOCALLY
-// const url = 'http://localhost:3025';
+const url = 'http://localhost:3025';
 
 const wordTree = new PrefixTree(...dictionary);
 
@@ -196,7 +196,7 @@ export default class SearchModal extends React.Component {
   searchForSuggestedItems(rawInput) {
     const input = rawInput.toLowerCase();
     const { products } = this.state;
-    let suggestedItems = _.filter(products, (item) => item.simple_name.includes(input)
+    let suggestedItems = _.filter(products, (item) => item.real_name.includes(input)
       || item.description.toLowerCase().includes(input)
       || item.category.includes(input));
     suggestedItems = suggestedItems.slice(0, 6);

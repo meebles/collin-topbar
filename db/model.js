@@ -1,4 +1,4 @@
-const Promise = require('bluebird');
+˜const Promise = require('bluebird');
 const db = require('./index.js');
 
 module.exports.getAllProducts = () => new Promise((resolve, reject) => {
