@@ -1,12 +1,7 @@
 const { Pool } = require("pg");
+const dbConfig = require("../env/dbconfig.js");
 
-const pool = new Pool({
-  user: "collin",
-  host: "ec2-18-219-128-13.us-east-2.compute.amazonaws.com",
-  database: "collin",
-  password: "hau boue",
-  port: 5432
-});
+const pool = new Pool(dbConfig);
 
 module.exports = {
   testPG: (id, callback) =>
